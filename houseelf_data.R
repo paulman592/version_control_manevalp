@@ -12,3 +12,4 @@ get_gc_content <- function(seq){
 
 GC_prop <- get_gc_content(houseelf_data$dnaseq)
 GC_prop
+
