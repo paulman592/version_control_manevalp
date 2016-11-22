@@ -16,6 +16,11 @@ get_ear_length <- function(seq){
     return(ear_lengths)
 }
 
+ears <- get_ear_length(houseelf_data$earlength)
 GC_prop <- get_gc_content(houseelf_data$dnaseq)
-GC_prop
 
+elf_data_all = data.frame(ID = character(length(houseelf_data$id)), Ear_size = ears,
+  GC_content = GC_prop, stringsAsFactors = F)
+elf_data_all
+
+write.csv(elf_data_all, "elf_data_all.csv")
